@@ -1,0 +1,176 @@
+/* global */
+/* herp_section */
+.hero_sectuion {
+    width: 100%;
+    height: 1058px;
+    position: relative;
+}
+
+.logo {
+    width: 20%;
+    max-width: 200px;
+    height: auto;
+    flex-shrink: 0;
+    margin: 2.86% 0 0 2.86%;
+}
+
+.hero_button {
+    border-radius: 999px;
+    border: 3px solid #A50319;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    float: right;
+    margin: 2.07% 2.86% 0 0;
+    /* ラインのグラデーション */
+}
+.butten_letter {
+    color: #A50319;
+    font-family: "Noto Sans JP";    
+    /* font-style: oblique 10deg;　傾かない */
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    padding: 0.937rem 2rem ;
+    flex-shrink: 0;
+    font-size: 24px;
+}
+
+.hero_button:hover {
+    /* background:linear-gradient(90deg,); */
+}
+
+.button_letter:hover {
+    color:#ffffff;
+}
+
+.hero_letter {
+    /* フォントサイズ少し小さい？ */
+    font-family: "Noto Sans JP";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 3.6px;
+    /* おそらくほぼすべてのマージンは見直しが必要 */
+    margin:7.125rem 27% 0 22.07%;
+    z-index: 2;
+}
+
+.hero_block {
+    background: #A50319;
+
+    font-style: normal;
+    font-weight: 900;
+    padding: 16px;  
+    margin:1.71rem 52.14% 0 22.07%;
+    /* 左幅の設定がおかしい？ */
+    /* ブロックが画面サイズによって伸びるし、縮む。 */
+}
+
+.hero_block_letter {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-family: "Noto Sans JP";
+}
+
+.hero_main {
+    /* font-familyがNotoにならない */
+    font-family: "Noto Sans JP";
+    font-size: 4.125rem;
+    font-style: normal;
+    font-weight: 900;
+    background: linear-gradient(180deg, #A50319 0%, #E8340C 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin:1.71rem 35.93% 0 22.07%;
+}
+
+.main_0 {
+    background: linear-gradient(180deg, #A50319 0%, #E8340C 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Noto Sans JP";
+    font-size: 3.125rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.main_1 {
+    background: linear-gradient(90deg, #A50319 0%, #E8340C 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Noto Sans JP";
+    font-size: 66px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.main_2 {
+    background: linear-gradient(90deg, #A50319 0%, #E8340C 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Noto Sans JP";
+    font-size: 68px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.hero_background {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    opacity: 0.6;
+    background:lightgray 50% / cover no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    object-fit: cover; /* 画像をコンテナにフィットさせる */
+    z-index: -1; /* 文字の後ろに配置 */
+}
+
+.hero_belt {
+    width: 100%;
+    height: 23.4375rem;
+    flex-shrink: 0;
+    margin-top: 7.125rem;
+}
+
+.hero_lady {
+    width: 58.43%;
+    flex-shrink: 0;
+    flex: right;
+    background-size: cover;
+    position: absolute;
+    top: 8.375rem;
+    right: 0;
+    margin-right: 41.57%;
+    object-fit: cover; /* 画像をコンテナにフィットさせる */
+    z-index: -1; /* 文字の後ろに配置 */
+    margin-inline: auto;
+    
+}
+
+.hero_three {
+    text-align: center; /* テキストを中央揃え */
+    width: 30%; /* 各アイテムの幅を均等に設定 */
+    box-sizing: border-box; /* パディングを含む幅計算に */
+    z-index: 2;
+    position: absolute;
+    top: 39rem;
+    align-items: center;
+}
+
+.item img {
+    width: 100%; /* アイテム幅に合わせる */
+    height: auto; /* アスペクト比を維持 */
+}
+
+.hack_text {
+
+}
+
