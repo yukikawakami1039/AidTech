@@ -1,25 +1,42 @@
 /* global */
+html {
+    font-size: 16px; /* 1rem = 16px を明示的に指定 */
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
 /* herp_section */
 .hero_sectuion {
+    justify-content: space-between;
     width: 100%;
     height: 1058px;
     position: relative;
 }
 
 .logo {
+    position: absolute;
     width: 20%;
     max-width: 200px;
     height: auto;
-    flex-shrink: 0;
-    margin: 2.86% 0 0 2.86%;
+    top: 2.86%;
+    left: 2.86%;
 }
 
 .hero_button {
+    width: 26.43%;
+    height: 4.06rem;
     border-radius: 999px;
     border: 3px solid #A50319;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     float: right;
-    margin: 2.07% 2.86% 0 0;
+    top: 2.07%;
+    left: 73%;
+    position: absolute;
+    z-index: 3;
     /* ラインのグラデーション */
 }
 .butten_letter {
@@ -29,8 +46,9 @@
     font-weight: 700;
     letter-spacing: 0.2rem;
     padding: 0.937rem 2rem ;
-    flex-shrink: 0;
-    font-size: 24px;
+    font-size: 1.5rem;
+    text-align: center;
+    white-space: nowrap; /* 改行を防ぐ */
 }
 
 .hero_button:hover {
@@ -48,27 +66,30 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: 3.6px;
+    letter-spacing: 0.225rem;
     /* おそらくほぼすべてのマージンは見直しが必要 */
-    margin:7.125rem 27% 0 22.07%;
     z-index: 2;
-}
-
-.hero_block {
-    background: #A50319;
-
-    font-style: normal;
-    font-weight: 900;
-    padding: 16px;  
-    margin:1.71rem 52.14% 0 22.07%;
-    /* 左幅の設定がおかしい？ */
-    /* ブロックが画面サイズによって伸びるし、縮む。 */
+    width: 50.93%;
+    top: 10.78%;
+    left: 22.07%;
+    position: absolute;
+    white-space: nowrap; /* 改行を防ぐ */
 }
 
 .hero_block_letter {
+    background: #A50319;
+    font-style: normal;
+    font-weight: 900;
+    padding: 0.9rem;  
+    max-width: 26.43%;
+    top: 19.09%;
+    left: 22.07%;
     font-size: 1.5rem;
     color: #ffffff;
     font-family: "Noto Sans JP";
+    white-space: nowrap; /* 改行を防ぐ */
+    position: absolute;
+    margin: 1rem;
 }
 
 .hero_main {
@@ -81,7 +102,12 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin:1.71rem 35.93% 0 22.07%;
+    top: 27.28%;
+    left: 22%;
+    margin: 1.3rem;
+    white-space: nowrap; /* 改行を防ぐ */
+    position: absolute;
+    display: ;
 }
 
 .main_0 {
@@ -96,48 +122,47 @@
     line-height: normal;
 }
 
-.main_1 {
+
+.main_1,
+.main2 {
     background: linear-gradient(90deg, #A50319 0%, #E8340C 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Noto Sans JP";
-    font-size: 66px;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
 }
 
+.main_1 {
+    font-size: 66px;
+}
+
 .main_2 {
-    background: linear-gradient(90deg, #A50319 0%, #E8340C 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Noto Sans JP";
     font-size: 68px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
 }
 
 .hero_background {
     width: 100%;
-    height: 100%;
+    height: auto;
     flex-shrink: 0;
     opacity: 0.6;
-    background:lightgray 50% / cover no-repeat;
-    background-size: cover;
+    /* background:lightgray 50% / cover no-repeat; */
     position: absolute;
-    top: 0;
-    object-fit: cover; /* 画像をコンテナにフィットさせる */
+    top: -20%;
+    right: 0;
     z-index: -1; /* 文字の後ろに配置 */
 }
 
 .hero_belt {
     width: 100%;
-    height: 23.4375rem;
-    flex-shrink: 0;
-    margin-top: 7.125rem;
+    height: auto;
+    /* 高さの設定わからん */
+    flex-shrink: 0; 
+    position: absolute;
+    left: 0;
+    top: 48.8vw; /* 追加 */
 }
 
 .hero_lady {
@@ -156,21 +181,111 @@
 }
 
 .hero_three {
-    text-align: center; /* テキストを中央揃え */
-    width: 30%; /* 各アイテムの幅を均等に設定 */
-    box-sizing: border-box; /* パディングを含む幅計算に */
     z-index: 2;
     position: absolute;
-    top: 39rem;
-    align-items: center;
-}
-
-.item img {
-    width: 100%; /* アイテム幅に合わせる */
-    height: auto; /* アスペクト比を維持 */
+    display: flex; /* フレックスボックスを有効にする */
+    justify-content: center; /* 水平方向に中央揃え */
+    align-items: center; /* 垂直方向に中央揃え */
+    flex-wrap: wrap; /* 幅が狭い場合に折り返す */
+    box-sizing: border-box; /* パディングを含む計算 */
+    top: 76.98%;
+    width: 100%;
+    flex-direction: column;
 }
 
 .hack_text {
-
+    max-width: 100%;
+    width: 53.93%;
+    height: auto; /* アスペクト比を維持 */
+    margin: 10px; /* 画像同士の間隔 */
 }
 
+@media screen and (max-width: 375px) {
+    html {
+        font-size: 14px; /* モバイルデバイスでは少し小さく */
+    }
+
+    /* 画像の幅・配置を変更 */
+    .logo {
+        width: 40%;
+    }
+
+    /* ボタンを中央寄せに */
+    .hero_button {
+        float: none; 
+        margin: 2rem auto 0; 
+        display: block; 
+        text-align: center;
+    }
+
+    /* ボタン文字のサイズを小さく */
+    .butten_letter {
+        font-size: 1rem; /* 16px程度 */
+        letter-spacing: 0.1rem;
+        padding: 0.625rem 1.25rem;
+    }
+
+    .hero_button,
+    .button_letter {
+        display: none !important;
+    }
+    
+    /* 見出しやテキストのサイズを小さく */
+    .hero_letter {
+        font-size: 0.9335rem;
+        margin: 1.5rem 10% 0 10%;
+    }
+
+    .hero_block_letter {
+        font-size: 1.12rem;
+        margin: 1rem 10% 0 10%;
+        display: inline-block;
+    }
+
+    /* メイン文字を少し小さく */
+    .hero_main {
+        font-size: 5.053rem; 
+        margin: 1rem 0 0 10%;
+        white-space: nowrap; /* 改行を防ぐ */
+    }
+
+    .main_0,
+    .main_1,
+    .main_2 {
+        font-size: 2rem; 
+    }
+
+    /* 女性画像の配置を自然な流れに */
+    .hero_lady {
+        position: absolute;  /* PCと同じ absolute を継続 */
+        right: -10%;            /* 右にはみ出す */
+        width: 50%;          /* 画面幅が小さいので少し幅を小さく調整（例） */
+        top: 10rem;          /* hero_main に合わせて上座標を微調整（例） */
+        /* marginやdisplayなども適宜調整 */
+        margin: 0;           /* 不要な余白は削除 */
+        display: block;      /* 必要ならそのまま block 指定でもOK */
+    }
+
+    .hero_background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -50%;
+        left: -20%;
+    }
+
+    .hero_belt {
+        position: absolute;
+        width: 100%;
+    }
+
+    /* 下に配置したい場合はpositionも解除して余白調整 */
+    .hero_three {
+        position: absolute;
+        margin: 2rem auto 0;
+    }
+
+    .hero_text {
+        margin: 0.16rem;
+    }
+}
