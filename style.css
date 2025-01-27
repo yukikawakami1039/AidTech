@@ -58,7 +58,7 @@ html {
 
 .hero_button:hover {
   background: linear-gradient(to right, #a50319, #e8340c) border-box,
-    /* 下レイヤー (border-box 全体) / #ffffff padding-box; / 上レイヤー (padding-box 内側) */
+    /* 下レイヤー (border-box 全体) */ #ffffff padding-box; /* 上レイヤー (padding-box 内側) */
   background-clip: border-box, padding-box;
   color: #ffffff;
 }
@@ -203,10 +203,11 @@ html {
   height: auto;
   /* 高さの設定わからん */
   flex-shrink: 0;
-  position: absolute;
   left: 0;
   /* topの高さremか%か     */
-  top: 42.68rem;
+  /* position: absolute;
+  top: 42.68rem; */
+  margin-top: 12vh;
 }
 
 .hero_lady {
