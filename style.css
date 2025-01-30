@@ -7,10 +7,9 @@ html {
 }
 
 .hero_wrapper {
-  width: 90%;
+  width: 95%;
   max-width: 1900px; /* 必要に応じて */
   height: 100%; /* 画面の高さいっぱいに */
-  text-align: center;
   margin: auto;
 }
 
@@ -58,7 +57,7 @@ html {
 
 .hero_button:hover {
   background: linear-gradient(to right, #a50319, #e8340c) border-box,
-    /* 下レイヤー (border-box 全体) */ #ffffff padding-box; /* 上レイヤー (padding-box 内側) */
+  #ffffff padding-box; 
   background-clip: border-box, padding-box;
   color: #ffffff;
 }
@@ -68,27 +67,24 @@ html {
 }
 
 .hero_letter {
-  /* フォントサイズ少し小さい？ */
   font-family: "Noto Sans JP";
-  font-size: clamp(0.875rem, 1.714vw, 2rem);
+  font-size: clamp(1.3rem, 1.714vw, 2rem);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.225rem;
   z-index: 2;
-  margin-top: 5vh;
-  /* white-space: nowrap; 改行を防ぐ */
-  text-align: center;
 }
 
-.hero_letter_p {
-  transform: translateX(-6.5%);
+.h_letter_0 {
+  margin:5vh 0 0 14.5vw;
+}
+
+.h_letter_1 {
+  margin:0 0 0 14.5vw;
 }
 
 .hero_block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
 }
 
@@ -97,151 +93,109 @@ html {
   font-style: normal;
   line-height: normal;
   font-weight: 900;
-  font-size: clamp(0.875rem, 1.714vw, 2rem);
+  font-size: clamp(1.3rem, 1.714vw, 2rem);
   color: #ffffff;
   font-family: "Noto Sans JP";
   padding: 0.5rem;
-  /* top: 13.18rem; */
-  /* left: 22.07%; */
   white-space: nowrap; /* 改行を防ぐ */
   display: inline-block;
-  margin-top: 1.9vh;
-  transform: translateX(-48%);
-  max-width: 54.3%;
+  margin: 3vh 0 0 15.5vw;
 }
 
-.hero_main {
-  text-align: center;
-}
-
-.hero_main_p0,
-.hero_main_p1,
-.hero_main_p2 {
-  /* font-familyがNotoにならない */
-  font-family: "Noto Sans JP";
-  font-size: clamp(1.875rem, 47.14vw, 4.125rem);
-  /* font-size: 4.325vw; */
-  font-style: normal;
-  font-weight: 900;
-  background: linear-gradient(180deg, #a50319 0%, #e8340c 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* top: 17.38rem; */
-  margin-top: 3.4vh;
-  white-space: nowrap; /* 改行を防ぐ */
-  text-align: center;
-  display: inline-block;
-  transform: translateX(-16.5%);
-  text-align: left;
-}
-/* .hero_main_p {
-  /* font-familyがNotoにならない 
-  font-family: "Noto Sans JP";
-  font-size: clamp(1.875rem, 47.14vw, 4.125rem);
-  /* font-size: 4.325vw; 
-  font-style: normal;
-  font-weight: 900;
-  background: linear-gradient(180deg, #a50319 0%, #e8340c 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* top: 17.38rem; 
-  margin-top: 3.4vh;
-  white-space: nowrap; /* 改行を防ぐ 
-  text-align: center;
-  display: inline-block;
-  transform: translateX(-16.5%);
-} */
+.hero_main_p {
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 900;
+    background: linear-gradient(90deg, #a50319 0%, #e8340c 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap; 
+    margin-top: 4vh;
+    line-height: normal;
+} 
 
 .main_0 {
   background: linear-gradient(180deg, #a50319 0%, #e8340c 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: "Noto Sans JP";
-  font-size: 3.125vw;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
+  font-size: clamp(2.275rem, 4vw, 2.825rem);
 }
 
+.main_0,
 .main_1,
-.main2 {
-  background: linear-gradient(90deg, #a50319 0%, #e8340c 100%);
+.main2,
+.main_3 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Noto Sans JP";
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
+  /* ここまでが継承されないもの */
 }
 
 .main_1 {
-  font-size: 4.125vw;
+  font-size: clamp(3.575rem, 5.14vw, 4.125rem);
 }
 
 .main_2 {
-  font-size: 4.25vw;
+  font-size: clamp(3.575rem, 5.14vw, 4.125rem);
+}
+
+.main_3 {
+  margin-left:15vw;
+  margin-top: 0;
+  font-size: clamp(3.575rem, 5.14vw, 4.125rem);
+
 }
 
 .hero_background {
   width: 100%;
-  height: auto;
-  flex-shrink: 0;
-  opacity: 0.6;
-  /* background:lightgray 50% / cover no-repeat; */
+  opacity: 0.7;
   position: absolute;
+  background-size: cover;
   top: -10%;
+  left: -8%;
   z-index: -1; /* 文字の後ろに配置 */
 }
-
-.hero_belt {
-  width: 100%;
-  height: auto;
-  /* 高さの設定わからん */
-  flex-shrink: 0;
-  left: 0;
-  /* topの高さremか%か     */
-  /* position: absolute;
-  top: 42.68rem; */
-  margin-top: 12vh;
-}
-
+/* 1/29 13:27　画像の位置を絶対値表現ではなく相対表現に */
 .hero_lady {
   width: 58.43%;
-  flex-shrink: 0;
-  flex: right;
-  background-size: cover;
   position: absolute;
-  top: 8.375rem;
+  top: 16vh;
   right: 0;
-  margin-right: 41.57%;
   object-fit: cover; /* 画像をコンテナにフィットさせる */
   z-index: -1; /* 文字の後ろに配置 */
   margin-inline: auto;
 }
 
-.hero_three {
-  z-index: 2;
+.hero_images {
+  position: relative;
+}
+
+.hero_belt {
   position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  z-index: 2;
+  margin-top: 8vw;
+}
+
+.hero_three {
+  position: absolute;
+  z-index: 3;
   display: flex; /* フレックスボックスを有効にする */
   justify-content: center; /* 水平方向に中央揃え */
   align-items: center; /* 垂直方向に中央揃え */
   flex-wrap: wrap; /* 幅が狭い場合に折り返す */
   box-sizing: border-box; /* パディングを含む計算 */
-  /* topの数値remか％か */
-  top: 39rem;
   width: 100%;
   flex-direction: column;
+  left: 0;
+  margin-top: 4vw;
 }
 
 .hack_text {
-  max-width: 100%;
   width: 53.94%;
   height: auto; /* アスペクト比を維持 */
-  margin: 10px; /* 画像同士の間隔 */
+  margin: 5px; /* 画像同士の間隔 */
 }
 
 @media screen and (max-width: 768px) {
@@ -251,6 +205,60 @@ html {
 
   .logo {
     margin-top: 1.5%;
+  }
+
+  .hero_letter {
+    font-size: clamp(1.075rem, 2.514vw, 1.5rem);
+  }
+
+  .h_letter_0 {
+    margin:4vh 0 0 2vw;
+  }
+  
+  .h_letter_1 {
+    margin-left: 2vw;
+  }
+
+  .hero_block {
+    max-width: 100%;
+  }
+  
+  .hero_block_letter {  
+    margin: 2vh 0 0 3vw;
+    font-size: clamp(1.005rem, 2.514vw, 1.5rem);
+    padding: 0.4rem;
+  }
+
+  .hero_main_p {
+    margin: 1vh 0 0 2vw;
+  }
+
+  .main_0 {
+    font-size: clamp(1.435rem, 4.8vw, 3.125rem);
+  }
+  
+  .main_1 {
+    font-size: clamp(1.875rem, 7.14vw, 4.125rem);
+  }
+  
+  .main_2 {
+    font-size: clamp(1.875rem, 7.14vw, 4.125rem);
+  }
+  
+  
+  .main_3 {
+    margin-left: 2vw;
+    font-size: clamp(1.875rem, 7.14vw, 4.125rem);
+  }
+
+  .hero_background {
+    top: -20%;
+    left: -9%;
+  }
+  
+  .hero_lady {
+    opacity: 0.7;
+    top: 20vh;
   }
 }
 
@@ -287,9 +295,9 @@ html {
 
   /* 見出しやテキストのサイズを小さく */
   .hero_letter {
-    font-size: 0.9335rem;
+    font-size: 0.7  335rem;
     margin: 1.5rem 10% 0 10%;
-    white-space: nowrap; /* 改行を防ぐ */
+    white-space: wrap; /* 改行を防ぐ */
   }
 
   .hero_block_letter {
@@ -316,7 +324,7 @@ html {
     position: absolute; /* PCと同じ absolute を継続 */
     right: -10%; /* 右にはみ出す */
     width: 50%; /* 画面幅が小さいので少し幅を小さく調整（例） */
-    top: 10rem; /* hero_main に合わせて上座標を微調整（例） */
+    top: 25vh; /* hero_main に合わせて上座標を微調整（例） */
     /* marginやdisplayなども適宜調整 */
     margin: 0; /* 不要な余白は削除 */
     display: block; /* 必要ならそのまま block 指定でもOK */
