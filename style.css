@@ -79,7 +79,6 @@ html {
   margin-top: 5vh;
   /* white-space: nowrap; 改行を防ぐ */
   text-align: center;
-  
 }
 
 .hero_letter_p {
@@ -112,29 +111,29 @@ html {
 }
 
 .hero_main {
-  text-align: center  ;
+  text-align: center;
 }
 
 .hero_main_p0,
 .hero_main_p1,
 .hero_main_p2 {
-    /* font-familyがNotoにならない */
-    font-family: "Noto Sans JP";
-    font-size: clamp(1.875rem, 47.14vw, 4.125rem);
-    /* font-size: 4.325vw; */
-    font-style: normal;
-    font-weight: 900;
-    background: linear-gradient(180deg, #a50319 0%, #e8340c 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* top: 17.38rem; */
-    margin-top: 3.4vh;
-    white-space: nowrap; /* 改行を防ぐ */
-    text-align: center;
-    display: inline-block;
-    transform: translateX(-16.5%);
-    text-align: left;
+  /* font-familyがNotoにならない */
+  font-family: "Noto Sans JP";
+  font-size: clamp(1.875rem, 47.14vw, 4.125rem);
+  /* font-size: 4.325vw; */
+  font-style: normal;
+  font-weight: 900;
+  background: linear-gradient(180deg, #a50319 0%, #e8340c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* top: 17.38rem; */
+  margin-top: 3.4vh;
+  white-space: nowrap; /* 改行を防ぐ */
+  text-align: center;
+  display: inline-block;
+  transform: translateX(-16.5%);
+  text-align: left;
 }
 /* .hero_main_p {
   /* font-familyがNotoにならない 
