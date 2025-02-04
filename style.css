@@ -548,7 +548,7 @@ body {
 
 .triangle {
   width: 100%;
-  height: 0; 
+  height: 0;
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
   border-top: 21vw solid #e5e5e5;
@@ -787,7 +787,8 @@ body {
   position: relative;
 }
 
-.six_block {
+.six_block,
+.six_block1 {
   background: #fff;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
   width: 21.8rem;
@@ -914,6 +915,9 @@ body {
   font-weight: 900;
   line-height: normal;
 }
+.sp_sev_letter {
+  display: none;
+}
 .seven_green_button {
   display: flex;
   width: clamp(45.37rem, 50vw, 46.37rem);
@@ -939,12 +943,11 @@ body {
 }
 
 .foot {
-  display: flex;
-  flex-direction: row; /* 横並び */
-  justify-content: center; /* 子要素間に均等なスペース */
-  align-items: center; /* 垂直方向は中央揃え */
-  background: #A50319;
-  height: 18.875rem; 
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  background: #a50319;
+  height: 18.875rem;
 }
 
 .foot_logo {
@@ -956,44 +959,29 @@ body {
 }
 
 .foot_img {
+  text-align: right;
+  margin-right: 11.3rem;
 }
 
 .sp_foot_rec {
- display: none;
-}
-
-.foot_rec {
-  position: absolute;
-  right: 63.8%;
-  z-index: 1;
-  width: 100%;
-  height: auto;
-  max-height: 18.875rem;
   display: none;
 }
+
 .foot_triangle {
   width: 50%;
   height: 0; /* 三角形の高さを設定 */
   border-left: 0 solid transparent;
-  border-right: 10rem solid transparent;
-  border-top: 18.875rem solid #E5E5E5;
+  border-right: 12rem solid transparent;
+  border-top: 18.875rem solid #e5e5e5;
   position: absolute;
   left: 0;
 }
-.foot_tri {
-  display: none;
-}
-
-.sp_foot_tri {
-  display: none;
-}
 
 .foot_contents {
-  margin-left: 15rem;
 }
 
 .foot_main {
-  color: #FFF;
+  color: #fff;
   font-family: "Noto Sans JP";
   font-size: 0.93rem;
   font-style: normal;
@@ -1006,7 +994,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 3.56rem;
-  color: #FFF;
+  color: #fff;
   font-family: "Noto Sans JP";
   font-size: 0.875rem;
   font-style: normal;
@@ -1019,7 +1007,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 4.4rem;
-  color: #FFF;
+  color: #fff;
   font-family: "Noto Sans JP";
   font-size: 0.875rem;
   font-style: normal;
@@ -1032,7 +1020,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 4.4rem;
-  color: #FFF;
+  color: #fff;
   font-family: "Noto Sans JP";
   font-size: 0.875rem;
   font-style: normal;
@@ -1045,7 +1033,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 2.7rem;
-  color: #FFF;
+  color: #fff;
   font-family: "Noto Sans JP";
   font-size: 0.875rem;
   font-style: normal;
@@ -1058,13 +1046,16 @@ body {
   display: flex;
   flex-direction: row;
   gap: 2.7rem;
-  color: #FFF;
+  color: #fff;
   font-family: "Noto Sans JP";
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   margin: 0.2rem 0 0.2rem 0;
+}
+.sp_foot_logo {
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -1154,17 +1145,17 @@ body {
   }
 
   .banzai_right {
-    width: 2.3%;
+    width: 3.3%;
     height: auto;
   }
 
   .banzai_letter {
     font-size: clamp(1rem, 4.7vw, 2rem);
-    margin: 0 5vw 0 5vw;
+    margin: 0 3vw 0 3vw;
   }
 
   .banzai_left {
-    width: 2.3%;
+    width: 3.3%;
     height: auto;
   }
 
@@ -1437,6 +1428,7 @@ body {
   }
 
   .six_section {
+    position: relative;
   }
 
   .six_contents {
@@ -1445,11 +1437,16 @@ body {
     align-items: center;
   }
 
-  .six_block {
+  .six_block,
+  .six_block1 {
     width: 90%;
     height: auto;
     padding: 4vw 4vw;
     margin: 2vw 0 3vw 0;
+  }
+
+  .six_block1 {
+    margin-bottom: 14vw;
   }
 
   .six_title {
@@ -1482,19 +1479,19 @@ body {
   .sp_six_background {
     display: block;
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* 親要素に合わせて高さ100% */
+    object-fit: cover;
     z-index: -1;
     opacity: 0.7;
-    width: 100%;
-    height: auto;
-    min-height: 63.8rem;
-    object-fit: cover;
-    bottom: 0;
-    left: 0;
-    top: 0;
   }
   .fixed_circle {
-    width: 5.25rem;
-    height: 5.25rem;
+    width: 11.1vw;
+    min-width: 4rem;
+    height: 11.1vw;
+    min-height: 4rem;
     background-color: #333;
     border-radius: 50%;
     display: flex;
@@ -1508,7 +1505,152 @@ body {
       -50%
     ); /* 要素幅の半分だけ左へずらし、左右の余白を同じに */
     color: #fff;
-    margin-top: 2rem;
+    margin-top: -6vw;
+  }
+
+  .fixed_circle {
+  }
+
+  .seven_section {
+  }
+
+  .sev_letter {
+  }
+  .sev_letter {
+    display: none;
+  }
+  .sp_sev_letter {
+    margin: 6rem 0 2.5rem 0;
+    background: linear-gradient(90deg, #a50319 0%, #e8340c 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    display: block;
+    font-size: clamp(1.5rem, 4.06vw, 2rem);
+  }
+
+  .second_letter {
+  }
+
+  .banzai_right {
+  }
+
+  .banzai_letter {
+  }
+
+  .banzai_left {
+  }
+
+  .seven_green_button {
+    width: 90%;
+    height: 11vw;
+  }
+
+  .green_letter {
+    font-size: clamp(1rem, 4.7vw, 2rem);
+  }
+
+  .foot {
+    display: flex !important;
+    flex-direction: column;
+    text-align: center !important;
+    height: 100%; 
+    }
+
+  .foot_img,
+  .foot_contents {
+    width: 100%;
+    text-align: center;
+  }
+
+  .foot_triangle {
+    width: 50%;
+    height: 0; /* 三角形の高さを設定 */
+    border-left: 0 solid transparent;
+    border-right: 12rem solid transparent;
+    border-top: 18.875rem solid #e5e5e5;
+    position: absolute;
+    left: 0;
+    display: none;
+  }
+
+  .foot_img {
+    display: none;
+  }
+  .sp_foot_img {
+    display: block;
+    width: 5vw;
+    height: auto;
+  }
+
+  .sp_foot_logo {
+    display: block;
+    text-align: left;
+  }
+
+  .foot_logo {
+    display: none;
+  }
+  .foot_details {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .foot_main,
+  .foot_company,
+  .foot_adress,
+  .foot_person,
+  .foot_num,
+  .foot_detail {
+    display: flex;
+  }
+
+  .foot_contents {
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .foot_main {
+    display: flex;  
+  }
+
+  .foot_company {
+    text-align: center; ;
+    display: flex;
+  }
+
+  .foot_adress {
+    display: flex;
+  }
+
+  .foot_person {
+    display: flex;
+  }
+
+  .foot_num {
+    display: flex;
+  }
+
+  .foot_detail {
+    display: flex;
+  }
+  .foot_triangle {
+    width: 50%;
+    height: 0; /* 三角形の高さを設定 */
+    border-left: 0 solid transparent;
+    border-right: 12rem solid transparent;
+    border-top: 18.875rem solid #e5e5e5;
+    position: absolute;
+    left: 0;
   }
 }
 
@@ -1699,6 +1841,29 @@ body {
     bottom: 0;
     left: 0;
     top: 0;
+  }
+
+  .six_block {
+    margin-bottom: 1rem;
+  }
+
+  .fixed_circle {
+    width: 3.65rem;
+    height: 3.75rem;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2; /* 他のコンテンツより上に表示 */
+    position: absolute;
+    left: 50%; /* 親要素の横幅中央に */
+    transform: translateX(
+      -50%
+    ); /* 要素幅の半分だけ左へずらし、左右の余白を同じに */
+    color: #fff;
+    margin-top: -7vw;
   }
 
   font-size: clamp(1.5rem, 4.06vw, 2rem);
