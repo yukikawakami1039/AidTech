@@ -240,7 +240,7 @@ body {
 .green_button {
   display: flex;
   width: clamp(45.37rem, 50vw, 46.37rem);
-  padding: 1.25rem;
+  padding: 1rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -548,7 +548,7 @@ body {
 
 .triangle {
   width: 100%;
-  height: 0; /* 三角形の高さを設定 */
+  height: 0; 
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
   border-top: 21vw solid #e5e5e5;
@@ -772,6 +772,299 @@ body {
 
 .sp_fif_red {
   display: none;
+}
+
+.six_section {
+  display: flex;
+  position: relative;
+}
+
+.six_contents {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 3.4rem;
+  position: relative;
+}
+
+.six_block {
+  background: #fff;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
+  width: 21.8rem;
+  height: 31.81rem;
+  padding: 1.25rem 1.25rem;
+  margin: 2.5rem 0 3.5rem 0;
+  position: relative;
+}
+
+.six_title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0; /* 画像とテキストの間隔 */
+  position: relative;
+}
+
+.six_title span {
+  color: #e8340c;
+}
+
+.six_title_letter {
+  text-align: center;
+  color: #000;
+  font-family: "Noto Sans JP";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.six_title_letter1 {
+  text-align: center;
+  color: #000;
+  font-family: "Noto Sans JP";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 1.2rem;
+}
+
+.six_title_img {
+  width: 2.1rem;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.six_img {
+  margin: 2.2rem 0.5rem 1.25rem 0.5rem;
+  width: 95%;
+}
+.six_img1 {
+  margin: 1.09rem 0.5rem 1.25rem 0.5rem;
+  width: 95%;
+}
+
+.six_detail {
+  color: #000;
+  font-family: "Noto Sans JP";
+  font-size: 1.15rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  line-height: 1.3; /* 行間を1.5倍に設定 */
+}
+
+.six_detail span {
+  color: #e8340c;
+}
+
+.six_background {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.7;
+  width: 100%;
+  min-height: 37.8rem;
+  object-fit: cover;
+  bottom: 0;
+  left: 0;
+}
+
+.sp_six_background {
+  display: none;
+}
+
+.fixed_circle {
+  width: 5.25rem;
+  height: 5.25rem;
+  background-color: #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2; /* 他のコンテンツより上に表示 */
+  position: absolute;
+  left: 50%; /* 親要素の横幅中央に */
+  transform: translateX(
+    -50%
+  ); /* 要素幅の半分だけ左へずらし、左右の余白を同じに */
+  color: #fff;
+  margin-top: -2.6rem;
+}
+
+.seven_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sev_letter {
+  margin: 5rem 0 2.5rem 0;
+  background: linear-gradient(90deg, #a50319 0%, #e8340c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-family: "Noto Sans JP";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+.seven_green_button {
+  display: flex;
+  width: clamp(45.37rem, 50vw, 46.37rem);
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999rem;
+  background: linear-gradient(to bottom, #090 50%, #038a03 50%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  margin-bottom: 2.6rem;
+}
+
+.green_letter {
+  color: #fff;
+  font-family: "Noto Sans JP";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.3rem;
+  text-decoration: none; /* 下線を消す */
+}
+
+.foot {
+  display: flex;
+  flex-direction: row; /* 横並び */
+  justify-content: center; /* 子要素間に均等なスペース */
+  align-items: center; /* 垂直方向は中央揃え */
+  background: #A50319;
+  height: 18.875rem; 
+}
+
+.foot_logo {
+  width: 8.75rem;
+  height: 5.5rem;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.foot_img {
+}
+
+.sp_foot_rec {
+ display: none;
+}
+
+.foot_rec {
+  position: absolute;
+  right: 63.8%;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  max-height: 18.875rem;
+  display: none;
+}
+.foot_triangle {
+  width: 50%;
+  height: 0; /* 三角形の高さを設定 */
+  border-left: 0 solid transparent;
+  border-right: 10rem solid transparent;
+  border-top: 18.875rem solid #E5E5E5;
+  position: absolute;
+  left: 0;
+}
+.foot_tri {
+  display: none;
+}
+
+.sp_foot_tri {
+  display: none;
+}
+
+.foot_contents {
+  margin-left: 15rem;
+}
+
+.foot_main {
+  color: #FFF;
+  font-family: "Noto Sans JP";
+  font-size: 0.93rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0.2rem 0 0.2rem 0;
+}
+
+.foot_company {
+  display: flex;
+  flex-direction: row;
+  gap: 3.56rem;
+  color: #FFF;
+  font-family: "Noto Sans JP";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0.2rem 0 0.2rem 0;
+}
+
+.foot_adress {
+  display: flex;
+  flex-direction: row;
+  gap: 4.4rem;
+  color: #FFF;
+  font-family: "Noto Sans JP";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0.2rem 0 0.2rem 0;
+}
+
+.foot_person {
+  display: flex;
+  flex-direction: row;
+  gap: 4.4rem;
+  color: #FFF;
+  font-family: "Noto Sans JP";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0.2rem 0 0.2rem 0;
+}
+
+.foot_num {
+  display: flex;
+  flex-direction: row;
+  gap: 2.7rem;
+  color: #FFF;
+  font-family: "Noto Sans JP";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0.2rem 0 0.2rem 0;
+}
+
+.foot_detail {
+  display: flex;
+  flex-direction: row;
+  gap: 2.7rem;
+  color: #FFF;
+  font-family: "Noto Sans JP";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0.2rem 0 0.2rem 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -1142,6 +1435,81 @@ body {
   .pc_fif_red {
     display: none;
   }
+
+  .six_section {
+  }
+
+  .six_contents {
+    gap: 5vw;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .six_block {
+    width: 90%;
+    height: auto;
+    padding: 4vw 4vw;
+    margin: 2vw 0 3vw 0;
+  }
+
+  .six_title {
+  }
+
+  .six_title_letter1 {
+  }
+
+  .six_title_img {
+  }
+
+  .six_img {
+  }
+
+  .six_detail {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+  }
+
+  .six_title_letter {
+    font-size: clamp(1.5rem, 3.06vw, 2rem);
+  }
+
+  .six_img1 {
+  }
+
+  .six_background {
+    display: none;
+  }
+
+  .sp_six_background {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    min-height: 63.8rem;
+    object-fit: cover;
+    bottom: 0;
+    left: 0;
+    top: 0;
+  }
+  .fixed_circle {
+    width: 5.25rem;
+    height: 5.25rem;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2; /* 他のコンテンツより上に表示 */
+    position: absolute;
+    left: 50%; /* 親要素の横幅中央に */
+    transform: translateX(
+      -50%
+    ); /* 要素幅の半分だけ左へずらし、左右の余白を同じに */
+    color: #fff;
+    margin-top: 2rem;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -1318,4 +1686,20 @@ body {
     width: 100%;
     margin: 0;
   }
+
+  .sp_six_background {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    min-height: 60.9rem;
+    object-fit: cover;
+    bottom: 0;
+    left: 0;
+    top: 0;
+  }
+
+  font-size: clamp(1.5rem, 4.06vw, 2rem);
 }
