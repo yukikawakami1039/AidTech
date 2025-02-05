@@ -390,5 +390,36 @@
         targets.forEach((target) => observer.observe(target));
       });
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // .green_button と .seven_green_button の両方を取得
+        const pageCTAs = document.querySelectorAll(
+          ".green_button, .seven_green_button"
+        );
+        const fixedCTA = document.querySelector(".fixed_button");
+
+        // 監視対象のCTAボタンが1件もなかったら処理中断
+        if (pageCTAs.length === 0 || !fixedCTA) return;
+
+        const observerOptions = {
+          root: null,
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          // 複数のエントリが渡されるので、いずれかが画面内にあるかを判定する
+          let anyVisible = false;
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              anyVisible = true;
+            }
+          });
+          fixedCTA.style.display = anyVisible ? "none" : "block";
+        }, observerOptions);
+
+        // すべてのCTAボタンを監視対象に追加する
+        pageCTAs.forEach((cta) => observer.observe(cta));
+      });
+    </script>
   </body>
 </html>
