@@ -69,6 +69,67 @@ body {
   color: #ffffff;
 }
 
+.fixed_button {
+  position: fixed;
+  z-index: 3;
+  right: 0;
+  bottom: 0;
+  margin: 0 1vw 1vw 0;
+}
+
+.fixed_letter {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.fixed_right {
+  width: 1.18rem;
+}
+
+.fixed_banzai_letter {
+  color: #000;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  font-size: 2rem;
+  margin: 0 1rem 0 1rem;
+}
+
+.fixed_left {
+  width: 1.18rem;
+}
+
+.fixed_green_button {
+  display: flex;
+  width: clamp(39.37rem, 40vw, 40.37rem);
+  padding: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999rem;
+  background: linear-gradient(to bottom, #090 50%, #038a03 50%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+.fixed_green_button:hover {
+  opacity: 0.7;
+}
+
+.fixed_btn_letter {
+  color: #fff;
+  font-family: "Noto Sans JP";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.3rem;
+  text-decoration: none;
+}
+
+
+
 .hero_letter {
   font-family: "Noto Sans JP";
   font-size: clamp(1rem, 1.714vw, 2rem);
@@ -148,7 +209,7 @@ body {
 }
 
 .hero_background {
-  width: 110%;
+  width: 108%;
   opacity: 0.7;
   position: absolute;
   background-size: cover;
@@ -561,7 +622,7 @@ body {
   height: 0;
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
-  border-top: 21vw solid #e5e5e5;
+  border-top: 19vw solid #e5e5e5;
   position: absolute;
   top: 0;
   left: 50%;
@@ -1053,6 +1114,52 @@ body {
     margin-top: 1.5%;
   }
 
+  .fixed_button {
+    position: fixed;
+    z-index: 3;
+    right: 0;
+    bottom: 0;
+    margin: 0 1vw 1vw 1vw;
+    width: 100%;
+  }
+  .fixed_btn {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .fixed_letter {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .fixed_right,
+  .fixed_left {
+    width: 2.7%;
+    height: auto;
+  }
+  
+  .fixed_banzai_letter {
+    font-size: clamp(1rem, 4vw, 2rem);
+    margin: 0 3vw 0 3vw;
+  }
+  
+  .fixed_green_button {
+    display: flex;
+    width: 90%;
+    height: 11vw;
+    padding: 2vw;
+  }
+
+  .fixed_green_button:hover {
+    opacity: 0.7;
+  }
+  
+  .fixed_btn_letter {
+    font-size: clamp(1rem, 4.7vw, 2rem);
+  }  
+
   .hero_letter {
     font-size: clamp(0.975rem, 2.514vw, 1.5rem);
   }
@@ -1209,7 +1316,7 @@ body {
     display: block;
     z-index: -2;
     block-size: cover;
-    left: -10%;
+    left: -25%;
   }
 
   .s_background {
@@ -1639,7 +1746,7 @@ body {
   }
 
   .hero_images {
-    overflow: hidden !important;
+    overflow: hidden;
   }
   /* 女性画像の配置を自然な流れに */
   .hero_lady {
@@ -1649,6 +1756,11 @@ body {
     top: 22vh; /* hero_main に合わせて上座標を微調整（例） */
     /* marginやdisplayなども適宜調整 */
     margin: 0; /* 不要な余白は削除 */
+  }
+
+  .hero_back {
+    width: 100%;
+    overflow: hidden;
   }
 
   .hero_background {
@@ -1776,5 +1888,15 @@ body {
     ); /* 要素幅の半分だけ左へずらし、左右の余白を同じに */
     color: #fff;
     margin-top: -7vw;
+  }
+
+  .fixed_button {
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
+    margin: 0 1vw 1vw 1vw;
+    max-width: 375px;
+    width: 100%;
   }
 }
