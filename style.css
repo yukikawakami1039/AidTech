@@ -252,7 +252,7 @@ body {
 
 .hero_three {
   position: relative;
-  z-index: 3;
+  z-index: 2;
   display: flex; /* フレックスボックスを有効にする */
   justify-content: center; /* 水平方向に中央揃え */
   align-items: center; /* 垂直方向に中央揃え */
@@ -1116,7 +1116,7 @@ body {
 
   .fixed_button {
     position: fixed;
-    z-index: 3;
+    z-index: 40;
     right: 0;
     bottom: 0;
     margin: 0 1vw 1vw 1vw;
@@ -1224,12 +1224,14 @@ body {
   .hero_three {
     width: 100%;
     margin-top: 2vw;
+    z-index: 2;
   }
 
   .hack_text {
     width: 95%;
     min-width: 1rem;
     height: auto;
+    z-index: 1;
   }
 
   .second_section {
