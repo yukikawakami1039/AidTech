@@ -1133,10 +1133,11 @@ body {
     position: fixed;
     z-index: 40;
     right: 0;
-    bottom: 0;
+    bottom: 4vw;
     margin: 0 1vw 1vw 1vw;
     width: 100%;
   }
+  
   .fixed_btn {
     align-items: center;
     justify-content: center;
@@ -1911,8 +1912,7 @@ body {
     position: fixed;
     z-index: 3;
     left: 0;
-    bottom: 0;
-    margin: 0 1vw 4vw 1vw;
+    bottom: 4vw;
     max-width: 375px;
     width: 100%;
   }
