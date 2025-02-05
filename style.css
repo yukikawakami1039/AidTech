@@ -166,10 +166,16 @@ body {
   object-fit: cover; /* 画像をコンテナにフィットさせる */
   z-index: -1; /* 文字の後ろに配置 */
 }
+.hero_back {
+  width: 100%;
+  height: 100%;
+}
 
 .hero_images {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .hero_belt {
@@ -247,6 +253,10 @@ body {
   border-radius: 999rem;
   background: linear-gradient(to bottom, #090 50%, #038a03 50%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+.green_button:hover {
+  opacity: 0.7;
 }
 
 .green_letter {
@@ -929,8 +939,12 @@ body {
   background: linear-gradient(to bottom, #090 50%, #038a03 50%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   margin-bottom: 2.6rem;
+  transition: all 0.3s ease;
 }
 
+.seven_green_button:hover {
+  opacity: 0.7;
+}
 .green_letter {
   color: #fff;
   font-family: "Noto Sans JP";
@@ -943,28 +957,9 @@ body {
 }
 
 .foot {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  align-items: center;
   background: #a50319;
-  height: 18.875rem;
-}
-
-.foot_logo {
-  width: 8.75rem;
-  height: 5.5rem;
-  flex-shrink: 0;
-  position: relative;
-  z-index: 2;
-}
-
-.foot_img {
-  text-align: right;
-  margin-right: 11.3rem;
-}
-
-.sp_foot_rec {
-  display: none;
+  width: 100%;
+  height: 18.75rem;
 }
 
 .foot_triangle {
@@ -975,85 +970,76 @@ body {
   border-top: 18.875rem solid #e5e5e5;
   position: absolute;
   left: 0;
+  z-index: 1;
+}
+
+.foot_img {
+  z-index: 2;
+}
+
+.foot_logo {
+  width: 8.75rem;
+  height: 5.5rem;
+  margin-left: 0rem;
 }
 
 .foot_contents {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 14.6rem;
 }
 
 .foot_main {
   color: #fff;
   font-family: "Noto Sans JP";
-  font-size: 0.93rem;
+  font-size: 15px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin: 0.2rem 0 0.2rem 0;
+}
+
+.foot_details {
+  color: #fff;
+  font-family: "Noto Sans JP";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 2;
 }
 
 .foot_company {
   display: flex;
   flex-direction: row;
   gap: 3.56rem;
-  color: #fff;
-  font-family: "Noto Sans JP";
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin: 0.2rem 0 0.2rem 0;
 }
 
 .foot_adress {
   display: flex;
   flex-direction: row;
-  gap: 4.4rem;
-  color: #fff;
-  font-family: "Noto Sans JP";
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin: 0.2rem 0 0.2rem 0;
+  gap: 4.44rem;
 }
 
 .foot_person {
   display: flex;
   flex-direction: row;
-  gap: 4.4rem;
-  color: #fff;
-  font-family: "Noto Sans JP";
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin: 0.2rem 0 0.2rem 0;
+  gap: 4.44rem;
 }
 
 .foot_num {
   display: flex;
   flex-direction: row;
-  gap: 2.7rem;
-  color: #fff;
-  font-family: "Noto Sans JP";
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin: 0.2rem 0 0.2rem 0;
+  gap: 2.68rem;
 }
 
 .foot_detail {
   display: flex;
   flex-direction: row;
-  gap: 2.7rem;
-  color: #fff;
-  font-family: "Noto Sans JP";
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin: 0.2rem 0 0.2rem 0;
+  gap: 2.68rem;
 }
+
 .sp_foot_logo {
   display: none;
 }
@@ -1217,13 +1203,13 @@ body {
     width: 95%;
   }
   .s_backgrounds {
-    width: 110%;
-    height: auto;
+    width: 130%;
+    height: 110%;
     position: absolute;
     display: block;
     z-index: -2;
     block-size: cover;
-    left: -5%;
+    left: -10%;
   }
 
   .s_background {
@@ -1309,12 +1295,6 @@ body {
     z-index: 1;
   }
 
-  .forth_section {
-  }
-
-  .f_title {
-  }
-
   .f_title_back {
     font-size: clamp(4rem, 13vw, 6rem);
   }
@@ -1331,12 +1311,6 @@ body {
     width: 95%;
   }
 
-  .f_contents_three {
-  }
-
-  .f_contents_block {
-  }
-
   .f_contents_letter {
     font-size: clamp(0.9rem, 3.2vw, 1.5rem);
   }
@@ -1349,9 +1323,6 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 5vw 4vw;
-  }
-
-  .f_detail_letter {
   }
 
   .f_exampl {
@@ -1383,9 +1354,6 @@ body {
 
   .f_background {
     display: none;
-  }
-
-  .fifth_secion {
   }
 
   .fif_letter {
@@ -1449,27 +1417,12 @@ body {
     margin-bottom: 14vw;
   }
 
-  .six_title {
-  }
-
-  .six_title_letter1 {
-  }
-
-  .six_title_img {
-  }
-
-  .six_img {
-  }
-
   .six_detail {
     font-size: clamp(1rem, 3vw, 1.25rem);
   }
 
   .six_title_letter {
     font-size: clamp(1.5rem, 3.06vw, 2rem);
-  }
-
-  .six_img1 {
   }
 
   .six_background {
@@ -1508,14 +1461,6 @@ body {
     margin-top: -6vw;
   }
 
-  .fixed_circle {
-  }
-
-  .seven_section {
-  }
-
-  .sev_letter {
-  }
   .sev_letter {
     display: none;
   }
@@ -1535,18 +1480,6 @@ body {
     font-size: clamp(1.5rem, 4.06vw, 2rem);
   }
 
-  .second_letter {
-  }
-
-  .banzai_right {
-  }
-
-  .banzai_letter {
-  }
-
-  .banzai_left {
-  }
-
   .seven_green_button {
     width: 90%;
     height: 11vw;
@@ -1560,8 +1493,10 @@ body {
     display: flex !important;
     flex-direction: column;
     text-align: center !important;
-    height: 100%; 
-    }
+    height: auto;
+    position: relative;
+    overflow: hidden;
+  }
 
   .foot_img,
   .foot_contents {
@@ -1570,14 +1505,15 @@ body {
   }
 
   .foot_triangle {
-    width: 50%;
-    height: 0; /* 三角形の高さを設定 */
-    border-left: 0 solid transparent;
-    border-right: 12rem solid transparent;
-    border-top: 18.875rem solid #e5e5e5;
+    width: 100%;
+    height: 100%; /* 三角形の高さを設定 */
+    border-left: 50rem solid transparent;
+    border-right: 0 solid transparent;
+    border-top: 6.91rem solid #e5e5e5;
     position: absolute;
     left: 0;
-    display: none;
+    z-index: 0;
+    rotate: 180deg;
   }
 
   .foot_img {
@@ -1585,13 +1521,15 @@ body {
   }
   .sp_foot_img {
     display: block;
-    width: 5vw;
-    height: auto;
+    z-index: 2;
   }
 
   .sp_foot_logo {
     display: block;
     text-align: left;
+    width: 6.25rem;
+    height: auto;
+    margin: 2.125rem 0 1rem 1rem;
   }
 
   .foot_logo {
@@ -1602,7 +1540,7 @@ body {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .foot_main,
   .foot_company,
   .foot_adress,
@@ -1610,6 +1548,7 @@ body {
   .foot_num,
   .foot_detail {
     display: flex;
+    text-align: left;
   }
 
   .foot_contents {
@@ -1617,14 +1556,17 @@ body {
     width: 100%;
     flex-direction: column;
     align-items: center;
+    position: relative;
   }
 
   .foot_main {
-    display: flex;  
+    display: flex;
+    margin-top: 4vw;
+    justify-content: center;
   }
 
   .foot_company {
-    text-align: center; ;
+    text-align: center;
     display: flex;
   }
 
@@ -1643,15 +1585,6 @@ body {
   .foot_detail {
     display: flex;
   }
-  .foot_triangle {
-    width: 50%;
-    height: 0; /* 三角形の高さを設定 */
-    border-left: 0 solid transparent;
-    border-right: 12rem solid transparent;
-    border-top: 18.875rem solid #e5e5e5;
-    position: absolute;
-    left: 0;
-  }
 }
 
 @media screen and (max-width: 375px) {
@@ -1661,6 +1594,7 @@ body {
 
   body {
     overflow-x: hidden;
+    width: 100%;
   }
 
   .logo {
@@ -1766,17 +1700,8 @@ body {
     width: 100%;
   }
 
-  .s_background {
-  }
-
-  .features_title {
-  }
-
   .title_back {
     font-size: clamp(3rem, 4vw, 4rem);
-  }
-
-  .title_front {
   }
 
   .features_contents {
@@ -1807,19 +1732,6 @@ body {
     text-align: center; /* テキストを中央揃え */
     margin: 0; /* 余白を必要に応じて調整 */
     align-items: center;
-  }
-
-  .p_letter {
-  }
-
-  .p_num {
-  }
-
-  .p_title {
-    display: flex;
-    justify-content: center; /* 横方向の中央揃え */
-    align-items: center; /* 縦方向の中央揃え */
-    text-align: center; /* インライン要素のテキストを中央揃え */
   }
 
   .p_detail {
@@ -1865,6 +1777,4 @@ body {
     color: #fff;
     margin-top: -7vw;
   }
-
-  font-size: clamp(1.5rem, 4.06vw, 2rem);
 }
