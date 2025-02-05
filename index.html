@@ -366,25 +366,28 @@
       </div>
     </footer>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const targets = document.querySelectorAll('.s_point'); // すべての .fade-in 要素を取得
-  
+      document.addEventListener("DOMContentLoaded", () => {
+        // 正しくは、カンマで区切った1つの文字列を渡す
+        const targets = document.querySelectorAll(
+          ".s_point, .f_contents_block"
+        );
+
         const observerOptions = {
           root: null, // ビューポートを基準とする
-          threshold: 0.1 // 10%表示されたらコールバック実行
+          threshold: 0.1, // 要素が10%表示されたらコールバック実行
         };
-  
+
         const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
+          entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
+              entry.target.classList.add("visible");
               observer.unobserve(entry.target); // 一度アニメーションしたら監視解除
             }
           });
         }, observerOptions);
-  
+
         // すべての対象要素を監視開始
-        targets.forEach(target => observer.observe(target));
+        targets.forEach((target) => observer.observe(target));
       });
     </script>
   </body>
