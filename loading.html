@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>資料請求完了 - ローディング</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+    .loading-container {
+      text-align: center;
+    }
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #a50319;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 20px;
+    }
+    .loading-text {
+      color: #333333;
+      font-size: 18px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+  <script>
+    window.addEventListener('load', async () => {
+      // 1. Local Storage からデータを取得
+      const nameValue = localStorage.getItem("name");
+      const emailValue = localStorage.getItem("email");
+      const messageValue = localStorage.getItem("message");
+
+      // 2. データがない場合、フォームに戻すなどのエラー対応
+      if (!nameValue || !emailValue) {
+        alert("フォームデータが見つかりません。再度入力をお願いします。");
+        window.location.href = "form.html";
+        return;
+      }
+
+      // 3. GASのWebアプリURL
+      const url =
+        "https://script.google.com/macros/s/AKfycbxbwpvEN0l6MmO8fEXuNFWQtH5PQcxBjuW4I9egDuD3E1zcq6ZCdRWDKhqw_AtZpDTI/exec";
+
+      // 4. fetch用にFormDataを作成
+      const formData = new FormData();
+      formData.append("name", nameValue);
+      formData.append("email", emailValue);
+      formData.append("message", messageValue);
+
+      try {
+        // 5. GAS へ POST
+        const response = await fetch(url, {
+          method: "POST",
+          body: formData
+        });
+        const result = await response.json();
+
+        // 6. 成功すればサンクスページに移動
+        if (result.status === "success") {
+          // 送信完了後、不要なLocal Storageを削除
+          localStorage.removeItem("name");
+          localStorage.removeItem("email");
+          localStorage.removeItem("message");
+          window.location.href = "thanks.html";
+        } else {
+          alert("送信中にエラーが発生しました: " + result.message);
+          // 必要に応じてフォームに戻すなど
+        }
+      } catch (error) {
+        alert("通信に失敗しました: " + error);
+        // 必要に応じてフォームに戻すなど
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="loading-container">
+    <div class="loading-spinner"></div>
+    <p class="loading-text">
+      資料送付の準備をしています。<br>少々お待ちください。
+    </p>
+  </div>
+</body>
+</html>
